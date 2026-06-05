@@ -1,0 +1,49 @@
+site_name: Predictive Modeling and Explainability Analysis of Cost Overrun and Schedule Delay in Construction Projects
+site_description: Machine Learning and Explainability Analysis of Cost Overrun and Delay
+
+theme:
+  name: material
+
+  palette:
+  - scheme: default
+    primary: blue
+    accent: indigo
+    toggle:
+      icon: material/weather-night
+      name: Switch to dark mode
+
+  - scheme: slate
+    primary: blue
+    accent: indigo
+    toggle:
+      icon: material/weather-sunny
+      name: Switch to light mode
+
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.tabs
+    - navigation.instant
+    - toc.follow
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Predictive Analysis: index.md
+
+  - Explainability: xai.md
+
+  - Discussion: discussion.md
+
