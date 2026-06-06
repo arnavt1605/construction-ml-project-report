@@ -251,6 +251,21 @@ This stage serves two purposes:
 
 ---
 
+#### Models Used
+Five baseline models were selected to represent diverse machine learning paradigms and provide a comprehensive comparison framework. 
+
+Logistic Regression was included as a linear baseline, K-Nearest Neighbors (KNN) as a distance-based method, Support Vector Machine (SVM) as a margin-based classifier, XGBoost as a gradient boosting ensemble, and CatBoost as a modern boosting algorithm optimized for tabular data. 
+
+Together, these models capture a wide range of learning strategies, enabling assessment of both linear and non-linear relationships within the dataset.
+
+---
+
+#### Hyperparameter Tuning
+
+The purpose of the baseline phase was to establish a fair and consistent benchmark for comparing different machine learning algorithms under standard settings. Using default or near default configurations allows the inherent strengths and weaknesses of each modeling approach to be evaluated without the influence of extensive optimization. 
+
+This stage was intended to identify promising candidate models for further investigation rather than maximize predictive performance.
+
 #### Experimental Setup
 
 | Component | Description |
@@ -481,6 +496,14 @@ tabular datasets. Leverages prior knowledge distilled from synthetic datasets to
 without dataset-specific training. Particularly well-suited for n < 1000 settings. 
 
 ![](images/tabpfn.png)
+
+
+#### Hyperparameter Tuning
+
+Following baseline evaluation, CatBoost and Logistic Regression were selected for detailed analysis. Hyperparameter optimization was performed only for CatBoost because its performance is highly dependent on parameters such as tree depth, learning rate, number of iterations, and regularization strength. Optimizing these parameters can significantly influence model behavior and predictive capability.
+
+
+In contrast, Logistic Regression has a relatively small and well-understood hyperparameter space, and it already demonstrated strong baseline performance. Therefore, additional optimization was considered unlikely to yield substantial improvements. As a result, tuning efforts were focused on CatBoost, where the potential performance gains were expected to be more meaningful.
 
 
 #### Final Modelling Results
