@@ -1,0 +1,2403 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Machine Learning and Explainability Analysis of Cost Overrun and Delay">
+      
+      
+      
+      
+      
+        <link rel="next" href="xai/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Predictive Modeling and Explainability Analysis of Cost Overrun and Schedule Delay in Construction Projects</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#predictive-modeling-and-explainability-analysis-of-cost-overrun-and-schedule-delay-in-construction-projects" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Predictive Modeling and Explainability Analysis of Cost Overrun and Schedule Delay in Construction Projects" class="md-header__button md-logo" aria-label="Predictive Modeling and Explainability Analysis of Cost Overrun and Schedule Delay in Construction Projects" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Predictive Modeling and Explainability Analysis of Cost Overrun and Schedule Delay in Construction Projects
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Predictive Analysis
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Predictive Analysis
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="xai/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Explainability
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="discussion/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Discussion
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQs
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Predictive Modeling and Explainability Analysis of Cost Overrun and Schedule Delay in Construction Projects" class="md-nav__button md-logo" aria-label="Predictive Modeling and Explainability Analysis of Cost Overrun and Schedule Delay in Construction Projects" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Predictive Modeling and Explainability Analysis of Cost Overrun and Schedule Delay in Construction Projects
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Predictive Analysis
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Predictive Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset Description
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dataset Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dataset-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset Characteristics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#target-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploratory-data-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exploratory Data Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exploratory Data Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descriptive-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descriptive Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#target-variable-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target Variable Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categorical-feature-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Categorical Feature Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correlation-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Correlation Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribution-analysis-of-key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distribution Analysis of Key Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eda-driven-modelling-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EDA-Driven Modelling Decisions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Engineering
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methodology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methodology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-preprocessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Preprocessing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baseline-modelling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Baseline Modelling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Baseline Modelling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#models-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Models Used
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hyperparameter-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hyperparameter Tuning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimental-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metric-selection-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metric Selection Rationale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baseline-modelling-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Baseline Modelling Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-observations-cost-overrun" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Observations – Cost Overrun
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-observations-delay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Observations – Delay
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Selection
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-employed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Method Employed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selection-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selection criteria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation-of-feature-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation of Feature Selection
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validation of Feature Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validation-1-positive-importance-features-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation 1 – Positive Importance Features Only
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation-2-mixed-feature-set-for-cost-overrun" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation 2 – Mixed Feature Set for Cost Overrun
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-modelling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Modelling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Final Modelling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#models-used_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Models used
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hyperparameter-tuning_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hyperparameter Tuning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-modelling-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Modelling Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-ranking-and-stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model Ranking and Stability
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="xai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explainability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="discussion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Discussion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset Description
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dataset Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dataset-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset Characteristics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#target-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploratory-data-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exploratory Data Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exploratory Data Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descriptive-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descriptive Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#target-variable-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target Variable Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categorical-feature-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Categorical Feature Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correlation-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Correlation Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribution-analysis-of-key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distribution Analysis of Key Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eda-driven-modelling-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EDA-Driven Modelling Decisions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Engineering
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methodology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methodology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-preprocessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Preprocessing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baseline-modelling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Baseline Modelling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Baseline Modelling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#models-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Models Used
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hyperparameter-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hyperparameter Tuning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimental-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metric-selection-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metric Selection Rationale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baseline-modelling-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Baseline Modelling Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-observations-cost-overrun" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Observations – Cost Overrun
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-observations-delay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Observations – Delay
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Selection
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-employed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Method Employed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selection-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selection criteria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation-of-feature-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation of Feature Selection
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validation of Feature Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validation-1-positive-importance-features-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation 1 – Positive Importance Features Only
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation-2-mixed-feature-set-for-cost-overrun" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation 2 – Mixed Feature Set for Cost Overrun
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-modelling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Modelling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Final Modelling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#models-used_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Models used
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hyperparameter-tuning_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hyperparameter Tuning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-modelling-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Modelling Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-ranking-and-stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model Ranking and Stability
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="predictive-modeling-and-explainability-analysis-of-cost-overrun-and-schedule-delay-in-construction-projects">Predictive Modeling and Explainability Analysis of Cost Overrun and Schedule Delay in Construction Projects<a class="headerlink" href="#predictive-modeling-and-explainability-analysis-of-cost-overrun-and-schedule-delay-in-construction-projects" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>Construction projects frequently face challenges related to cost overruns and schedule delays, which can significantly impact project profitability, resource utilization, and stakeholder confidence. Early identification of these risks enables project managers to take corrective actions and improve overall project performance.</p>
+<p>A comprehensive machine learning workflow was implemented, including exploratory data analysis, feature engineering, feature selection, baseline modeling, hyperparameter optimization, explainability analysis, and statistical validation. Multiple classical machine learning models, deep learning architectures, and modern pretrained tabular models were evaluated and compared.</p>
+<hr />
+<h2 id="objective">Objective<a class="headerlink" href="#objective" title="Permanent link">&para;</a></h2>
+<p>To evaluate the feasibility of predicting cost overruns and schedule delays in construction projects using machine learning and explainable AI techniques.</p>
+<hr />
+<h2 id="dataset-description">Dataset Description<a class="headerlink" href="#dataset-description" title="Permanent link">&para;</a></h2>
+<p>The dataset  used in this study connsists of 150 real world construction projects collected across different project categories. Each record represents a single project and contains information related to project costs, schedule performance, risk exposure, contractor experience and operation factors.</p>
+<p>The dataset was developed to investigate the feasibility of predicting two critical project outcomes:</p>
+<ul>
+<li>Cost Overrun Flag</li>
+<li>Delay Flag</li>
+</ul>
+<p>Both variables are binary in nature, where 1 indicates that the event occured and 0 indicates vice versa.</p>
+<p>In addition to the original project attributes, several engineered features were later developed to capture more complex relationships between project characteristics and outcomes.</p>
+<hr />
+<h3 id="dataset-characteristics">Dataset Characteristics<a class="headerlink" href="#dataset-characteristics" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Number of Projects</td>
+<td>150</td>
+</tr>
+<tr>
+<td>Number of Features</td>
+<td>21</td>
+</tr>
+<tr>
+<td>Numerical Features</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Categorical Features</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Target Variables</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Project Categories</td>
+<td>Residential, Commercial, Infrastructure, Mixed-Use</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="target-variables">Target Variables<a class="headerlink" href="#target-variables" title="Permanent link">&para;</a></h3>
+<p><strong>Cost Overrun Flag</strong></p>
+<p>Indicates whether the actual project cost exceeded the planned baseline cost.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>No Cost Overrun</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Cost Overrun</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Delay Flag</strong></p>
+<p>Indicates whether the project experienced schedule delays relative to the planned duration.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>On Schedule</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Delayed</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="feature-description">Feature Description<a class="headerlink" href="#feature-description" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Feature Name</th>
+<th>Type</th>
+<th>Category</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Project Type</td>
+<td>Categorical</td>
+<td>Project Attribute</td>
+<td>Infrastructure, Commercial, Residential, Industrial, Mixed Use</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Baseline Cost (cr)</td>
+<td>Numerical</td>
+<td>Financial</td>
+<td>Initial estimated project cost in crores</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Baseline Duration (Months)</td>
+<td>Numerical</td>
+<td>Scheduling</td>
+<td>Planned project duration in months</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Productivity Index</td>
+<td>Numerical</td>
+<td>Resource</td>
+<td>Ratio of work output to planned output (0–1 scale)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Schedule Adherence %</td>
+<td>Numerical</td>
+<td>Scheduling</td>
+<td>Percentage of milestones completed on time</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Risk Score</td>
+<td>Numerical</td>
+<td>Risk</td>
+<td>Composite risk rating assigned at project inception</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Delay Events</td>
+<td>Numerical</td>
+<td>Scheduling</td>
+<td>Number of recorded delay incidents during project</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Safety Incidents</td>
+<td>Numerical</td>
+<td>Safety</td>
+<td>Count of on-site safety incidents reported</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Weather Disruptions</td>
+<td>Numerical</td>
+<td>External Risk</td>
+<td>Number of work stoppages due to adverse weather</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Permit Delays Days</td>
+<td>Numerical</td>
+<td>Administrative</td>
+<td>Total days lost due to permit/regulatory delays</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Primary Contractor Exp. Years</td>
+<td>Numerical</td>
+<td>Resource</td>
+<td>Years of experience of the primary contractor</td>
+</tr>
+<tr>
+<td>12</td>
+<td>No. of Subcontractors</td>
+<td>Numerical</td>
+<td>Resource</td>
+<td>Total number of subcontractors involved</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Procurement Method</td>
+<td>Categorical</td>
+<td>Procurement</td>
+<td>Method used for contractor selection (Open Tender, Selective Tender, Direct Award, E-Procurement)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="exploratory-data-analysis">Exploratory Data Analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permanent link">&para;</a></h2>
+<p>Exploratory Data Analysis was conducted on the raw dataset to understand the statistical 
+properties of features, identify distributional patterns, and uncover relationships between 
+features and target variables. The insights derived from EDA directly informed subsequent 
+modeling decisions, particularly feature engineering strategies and model selection. </p>
+<h3 id="descriptive-statistics">Descriptive Statistics<a class="headerlink" href="#descriptive-statistics" title="Permanent link">&para;</a></h3>
+<p>Descriptive statistical analysis was performed to summarize the central tendency, variability, and distribution of the numerical features within the dataset. Metrics such as mean, standard deviation, minimum, maximum, and skewness were examined to gain an initial understanding of the project characteristics. </p>
+<p>The descriptive statistics indicate substantial diversity in project size, duration, and operational conditions across the dataset. Baseline cost and project duration exhibit the highest variability, reflecting the presence of both small and large-scale construction projects. Most risk and operational features show slight positive skewness, suggesting that while the majority of projects experience moderate levels of risk-related events, a smaller number of projects are exposed to significantly higher disruptions. </p>
+<p>Overall, the dataset captures a broad range of project characteristics, making it suitable for investigating the factors influencing cost overruns and schedule delays.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Mean</th>
+<th>Median</th>
+<th>Std Dev</th>
+<th>Min</th>
+<th>Max</th>
+<th>Skewness</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Baseline Cost (cr)</td>
+<td>~150</td>
+<td>~140</td>
+<td>~60</td>
+<td>50</td>
+<td>300</td>
+<td>Moderate Right</td>
+</tr>
+<tr>
+<td>Baseline Duration (Months)</td>
+<td>~24</td>
+<td>~22</td>
+<td>~9</td>
+<td>6</td>
+<td>48</td>
+<td>Slight Right</td>
+</tr>
+<tr>
+<td>Productivity Index</td>
+<td>~0.75</td>
+<td>~0.76</td>
+<td>~0.10</td>
+<td>0.40</td>
+<td>1.00</td>
+<td>Slight Left</td>
+</tr>
+<tr>
+<td>Schedule Adherence %</td>
+<td>~70</td>
+<td>~72</td>
+<td>~15</td>
+<td>30</td>
+<td>100</td>
+<td>Slight Left</td>
+</tr>
+<tr>
+<td>Risk Score</td>
+<td>~0.40</td>
+<td>~0.38</td>
+<td>~0.12</td>
+<td>0.10</td>
+<td>0.70</td>
+<td>Slight Right</td>
+</tr>
+<tr>
+<td>Delay Events</td>
+<td>~5</td>
+<td>~5</td>
+<td>~3</td>
+<td>0</td>
+<td>14</td>
+<td>Slight Right</td>
+</tr>
+<tr>
+<td>Safety Incidents</td>
+<td>~4</td>
+<td>~4</td>
+<td>~2</td>
+<td>0</td>
+<td>10</td>
+<td>Slight Right</td>
+</tr>
+<tr>
+<td>Weather Disruptions</td>
+<td>~3</td>
+<td>~3</td>
+<td>~2</td>
+<td>0</td>
+<td>9</td>
+<td>Slight Right</td>
+</tr>
+<tr>
+<td>Permit Delays Days</td>
+<td>~7</td>
+<td>~7</td>
+<td>~3</td>
+<td>1</td>
+<td>14</td>
+<td>Approx. Symmetric</td>
+</tr>
+<tr>
+<td>Contractor Exp. Years</td>
+<td>~15</td>
+<td>~15</td>
+<td>~5</td>
+<td>5</td>
+<td>28</td>
+<td>Approx. Symmetric</td>
+</tr>
+<tr>
+<td>No. of Subcontractors</td>
+<td>~6</td>
+<td>~6</td>
+<td>~3</td>
+<td>1</td>
+<td>14</td>
+<td>Approx. Symmetric</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="target-variable-distribution">Target Variable Distribution<a class="headerlink" href="#target-variable-distribution" title="Permanent link">&para;</a></h3>
+<p>The figure below presents the class distribution for both target variables. Both Cost Overrun Flag and Delay Flag show approximately balanced distributions, with a slight imbalance in Delay Flag Distribution that motivated the use of stratified sampling and class-weighted models.</p>
+<p><img alt="" src="images/pie.png" /></p>
+<hr />
+<h3 id="categorical-feature-analysis">Categorical Feature Analysis<a class="headerlink" href="#categorical-feature-analysis" title="Permanent link">&para;</a></h3>
+<p>The figure below presents count distributions for categorical features. Project Type is distributed 
+across five categories (Infrastructure, Commercial, Residential, Industrial, Mixed-Use), while 
+Procurement Method spans four categories (Open Tender, Selective Tender, Direct Award, E
+Procurement). The distributions are approximately uniform, ensuring representation of all 
+procurement strategies and project types.</p>
+<p><img alt="" src="images/cat_variable_dist.png" /></p>
+<hr />
+<h3 id="correlation-analysis">Correlation Analysis<a class="headerlink" href="#correlation-analysis" title="Permanent link">&para;</a></h3>
+<p>The figure shows the Pearson correlation heatmap among numerical features. Key observations 
+include: </p>
+<ul>
+<li>Baseline Cost and Baseline Duration exhibit moderate positive correlation, reflecting 
+the natural relationship between project scale and timeline. </li>
+<li>Productivity Index and Schedule Adherence % show moderate positive correlation, 
+suggesting that productive projects tend to meet their schedules. </li>
+<li>Risk Score and Delay Events show weak positive correlation with both target 
+variables, suggesting that these features individually have limited linear predictive 
+power. </li>
+<li><strong>No single feature exhibits strong linear correlation with either target, motivating the 
+need for feature engineering to capture non-linear interactions.</strong></li>
+</ul>
+<p><img alt="" src="images/heatmap.png" /></p>
+<hr />
+<h3 id="distribution-analysis-of-key-features">Distribution Analysis of Key Features<a class="headerlink" href="#distribution-analysis-of-key-features" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Baseline Cost and Actual Cost exhibit wide distributions, indicating the presence of projects with significantly different scales and budgets.</p>
+</li>
+<li>
+<p>Baseline Duration and Actual Duration show considerable variation, suggesting that the dataset contains both short-term and long-term construction projects.</p>
+</li>
+<li>
+<p>Productivity Index and Productivity_Adjusted are approximately normally distributed, with most projects concentrated around moderate productivity levels.</p>
+</li>
+<li>
+<p>Schedule Adherence % is skewed toward higher values, indicating that a substantial proportion of projects maintained relatively good schedule compliance.</p>
+</li>
+<li>
+<p>Cost Variance % and Schedule Variance % follow approximately bell-shaped distributions, suggesting that most projects experienced moderate deviations from planned estimates.</p>
+</li>
+<li>
+<p>Risk Score is slightly right-skewed, indicating that while most projects have moderate risk exposure, a smaller number of projects face substantially higher risks.</p>
+</li>
+<li>
+<p>Delay Events, Safety Incidents, and Permit Delay Days exhibit positive skewness, showing that severe disruptions occur less frequently but can significantly affect certain projects.</p>
+</li>
+<li>
+<p>Weather Disruptions are highly concentrated at lower values, suggesting that most projects experienced minimal weather-related interruptions.</p>
+</li>
+<li>
+<p>Primary Contractor Experience Years follows a near-normal distribution, indicating a balanced mix of experienced and less experienced contractors.</p>
+</li>
+<li>
+<p>Delay Flag and Cost Overrun Flag are relatively balanced across classes, making them suitable for classification modeling without severe class imbalance concerns.</p>
+</li>
+<li>
+<p>Major Issue Flag is noticeably imbalanced, with most projects not reporting major issues.</p>
+</li>
+<li>
+<p>Engineered features such as Delay_per_event, Risk_Impact, and Experience_Gap exhibit strong positive skewness, indicating the presence of a small number of projects with exceptionally high risk or disruption levels.</p>
+</li>
+<li>
+<p>Project_Complexity displays a broad distribution across complexity levels, suggesting adequate representation of both simple and complex projects within the dataset.</p>
+</li>
+<li>
+<p><strong>Overall, the dataset captures substantial variability in project cost, schedule, risk, and operational conditions, providing a suitable foundation for predictive modeling and explainability analysis.</strong></p>
+</li>
+</ul>
+<p><img alt="" src="images/histogram.png" /></p>
+<hr />
+<h3 id="eda-driven-modelling-decisions">EDA-Driven Modelling Decisions<a class="headerlink" href="#eda-driven-modelling-decisions" title="Permanent link">&para;</a></h3>
+<p>The following modelling decisions were directly motivated by EDA findings:</p>
+<table>
+<thead>
+<tr>
+<th>EDA Observation</th>
+<th>Modeling Decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Slight class imbalance in both targets</td>
+<td>Stratified K-Fold Cross-Validation and class weights applied where supported</td>
+</tr>
+<tr>
+<td>Skewed numerical features (Cost, Duration)</td>
+<td>Standard scaling applied for Logistic Regression, KNN, and SVM</td>
+</tr>
+<tr>
+<td>Weak direct linear correlations with targets</td>
+<td>Feature engineering used to create interaction and ratio features</td>
+</tr>
+<tr>
+<td>Mixed data types (numerical + categorical)</td>
+<td>One-Hot Encoding applied; CatBoost leveraged native categorical handling</td>
+</tr>
+<tr>
+<td>No strong single-feature predictors</td>
+<td>Ensemble and non-linear models prioritized in the final modeling pipeline</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="feature-engineering">Feature Engineering<a class="headerlink" href="#feature-engineering" title="Permanent link">&para;</a></h2>
+<p>Feature engineering was performed to address the weak linear relationships identified during 
+EDA and to introduce richer representations of project complexity, efficiency, and risk. </p>
+<p>Individual raw features may carry limited predictive signal when examined in isolation. By 
+constructing derived features that capture ratios, interaction effects, complexity aggregates, and 
+imbalance indicators, the feature space can be enriched to enable models to learn from higher
+order relationships that are not directly measurable but are theoretically meaningful in the 
+construction domain.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Formula</th>
+<th>Type</th>
+<th>Justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cost per Month</strong></td>
+<td>Baseline Cost ÷ Baseline Duration</td>
+<td>Ratio</td>
+<td>Normalizes project cost relative to duration and captures monthly cost intensity.</td>
+</tr>
+<tr>
+<td><strong>Delay per Event</strong></td>
+<td>Permit Delay Days ÷ Delay Events</td>
+<td>Ratio</td>
+<td>Represents the average administrative delay associated with each delay incident.</td>
+</tr>
+<tr>
+<td><strong>Risk Impact</strong></td>
+<td>Risk Score × Baseline Cost</td>
+<td>Interaction</td>
+<td>Captures the combined effect of project scale and risk severity; larger high-risk projects face greater exposure.</td>
+</tr>
+<tr>
+<td><strong>Productivity Adjusted</strong></td>
+<td>Productivity Index × Schedule Adherence (%)</td>
+<td>Interaction</td>
+<td>Measures overall operational efficiency by combining productivity and schedule performance.</td>
+</tr>
+<tr>
+<td><strong>Project Complexity</strong></td>
+<td>No. of Subcontractors + Delay Events + Weather Disruptions</td>
+<td>Complexity Indicator</td>
+<td>Aggregates multiple operational challenges into a proxy measure of project complexity.</td>
+</tr>
+<tr>
+<td><strong>Experience Gap</strong></td>
+<td>Baseline Cost ÷ Contractor Experience Years</td>
+<td>Stress Indicator</td>
+<td>Quantifies the mismatch between project scale and contractor experience; higher values indicate greater management stress.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h2>
+<p>The following section provides a comprehensive overview of the methodology adopted for this study.</p>
+<h3 id="data-preprocessing">Data Preprocessing<a class="headerlink" href="#data-preprocessing" title="Permanent link">&para;</a></h3>
+<p>Prior to modeling, the following preprocessing steps were applied to ensure data quality and 
+compatibility with the models: </p>
+<ul>
+<li>
+<p>Missing Value Treatment: The dataset contained no missing values post-curation; no imputation was required. </p>
+</li>
+<li>
+<p>Categorical Encoding: Categorical variables (Project Type, Procurement Method) were one-hot encoded for models requiring numerical inputs (Logistic Regression, MLP). CatBoost natively handles categorical features and was provided with category indices directly. </p>
+</li>
+<li>
+<p>Feature Scaling: Standard scaling (zero mean, unit variance) was applied to numerical features for Logistic Regression, KNN, and SVM to ensure distance-based and  gradient-based models are not dominated by high-magnitude features. </p>
+</li>
+<li>
+<p>Class Imbalance Handling: Stratified K-Fold cross-validation was employed to  preserve class proportions across folds. Class weights were incorporated into applicable models (Logistic Regression, SVM) to penalize misclassification of the minority class. </p>
+</li>
+</ul>
+<hr />
+<h3 id="baseline-modelling">Baseline Modelling<a class="headerlink" href="#baseline-modelling" title="Permanent link">&para;</a></h3>
+<p>A baseline modeling experiment was conducted using only the original domain-specific features (prior to feature engineering) to establish a reference point for model performance.</p>
+<p>This stage serves two purposes:</p>
+<ol>
+<li>To assess the predictability of cost overrun and delay using the original project features.</li>
+<li>To justify the need for feature engineering and subsequent model refinement.</li>
+</ol>
+<hr />
+<h4 id="models-used">Models Used<a class="headerlink" href="#models-used" title="Permanent link">&para;</a></h4>
+<p>Five baseline models were selected to represent diverse machine learning paradigms and provide a comprehensive comparison framework. </p>
+<p>Logistic Regression was included as a linear baseline, K-Nearest Neighbors (KNN) as a distance-based method, Support Vector Machine (SVM) as a margin-based classifier, XGBoost as a gradient boosting ensemble, and CatBoost as a modern boosting algorithm optimized for tabular data. </p>
+<p>Together, these models capture a wide range of learning strategies, enabling assessment of both linear and non-linear relationships within the dataset.</p>
+<hr />
+<h4 id="hyperparameter-tuning">Hyperparameter Tuning<a class="headerlink" href="#hyperparameter-tuning" title="Permanent link">&para;</a></h4>
+<p>The purpose of the baseline phase was to establish a fair and consistent benchmark for comparing different machine learning algorithms under standard settings. Using default or near default configurations allows the inherent strengths and weaknesses of each modeling approach to be evaluated without the influence of extensive optimization. </p>
+<p>This stage was intended to identify promising candidate models for further investigation rather than maximize predictive performance.</p>
+<h4 id="experimental-setup">Experimental Setup<a class="headerlink" href="#experimental-setup" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Input Features</strong></td>
+<td>13 raw domain-specific features (see the <a href="#feature-description">Feature Description Table</a>)</td>
+</tr>
+<tr>
+<td><strong>Target Variables</strong></td>
+<td>Cost Overrun Flag, Delay Flag (modeled independently)</td>
+</tr>
+<tr>
+<td><strong>Models</strong></td>
+<td>Logistic Regression, K-Nearest Neighbors (KNN), Support Vector Machine (SVM), XGBoost, CatBoost</td>
+</tr>
+<tr>
+<td><strong>Evaluation Protocol</strong></td>
+<td>Stratified 10-Fold Cross-Validation with mean and standard deviation reported across folds</td>
+</tr>
+<tr>
+<td><strong>Evaluation Metrics</strong></td>
+<td>F1 Score, ROC-AUC, Accuracy, Precision, Recall, Matthews Correlation Coefficient (MCC)</td>
+</tr>
+</tbody>
+</table>
+<p>All models were trained using default hyperparameters during the baseline stage to ensure a fair comparison without optimization bias. Categorical encoding and feature scaling were applied as described previously.</p>
+<hr />
+<pre><code class="language-python">
+# Input and target features for the baseline modelling
+# These are based on suggestions from domain experts
+
+INPUT_FEATURES = [
+    'Project type',
+    'Baseline Cost cr',
+    'Baseline Duration Months',
+    'Productivity Index',
+    'Schedule Adherence %',
+    'Risk Score',
+    'Delay Events',
+    'Safety Incidents',
+    'Weather Disruptions',
+    'Permit Delays Days',
+    'Primary Contractor Experience Years',
+    'No.of Subcontractors',
+    'Procurement Method',
+]
+
+TARGETS = ['Cost Overrun Flag', 'Delay Flag']
+</code></pre>
+<hr />
+<h4 id="metric-selection-rationale">Metric Selection Rationale<a class="headerlink" href="#metric-selection-rationale" title="Permanent link">&para;</a></h4>
+<p>Given the binary classification nature of the problem and the presence of slight class imbalance, the following evaluation metrics were selected:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Mathematical Formula</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>F1 Score</strong></td>
+<td><span class="arithmatex">\(F1 = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}\)</span></td>
+<td>Balances false positives and false negatives; critical for imbalanced data</td>
+</tr>
+<tr>
+<td><strong>ROC-AUC</strong></td>
+<td><span class="arithmatex">\(AUC = \int_{0}^{1} TPR(FPR^{-1}(x))\,dx\)</span></td>
+<td>Threshold-independent measure of discriminative ability</td>
+</tr>
+<tr>
+<td><strong>Accuracy</strong></td>
+<td><span class="arithmatex">\(\text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}\)</span></td>
+<td>Measures overall correctness; may be misleading under class imbalance</td>
+</tr>
+<tr>
+<td><strong>Precision</strong></td>
+<td><span class="arithmatex">\(\text{Precision} = \frac{TP}{TP + FP}\)</span></td>
+<td>Measures reliability of positive predictions</td>
+</tr>
+<tr>
+<td><strong>Recall</strong></td>
+<td><span class="arithmatex">\(\text{Recall} = \frac{TP}{TP + FN}\)</span></td>
+<td>Measures ability to detect actual positive cases</td>
+</tr>
+<tr>
+<td><strong>MCC</strong></td>
+<td><span class="arithmatex">\(\text{MCC} = \frac{TP \times TN - FP \times FN}{\sqrt{(TP+FP)(TP+FN)(TN+FP)(TN+FN)}}\)</span></td>
+<td>Most informative for binary classification; incorporates all confusion matrix outcomes</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="baseline-modelling-results">Baseline Modelling Results<a class="headerlink" href="#baseline-modelling-results" title="Permanent link">&para;</a></h4>
+<p>The baseline models were evaluated using the original domain-specific features without any feature engineering or hyperparameter optimization. The following table summarizes the mean and standard deviation of the evaluation metrics obtained through Stratified 10-Fold Cross-Validation.</p>
+<table>
+<thead>
+<tr>
+<th>Target</th>
+<th>Model</th>
+<th>Accuracy (Mean ± Std)</th>
+<th>Precision (Mean ± Std)</th>
+<th>Recall (Mean ± Std)</th>
+<th>F1 (Mean ± Std)</th>
+<th>ROC-AUC (Mean ± Std)</th>
+<th>MCC (Mean ± Std)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cost Overrun Flag</td>
+<td>CatBoost</td>
+<td>0.540 ± 0.124</td>
+<td>0.574 ± 0.207</td>
+<td>0.511 ± 0.185</td>
+<td>0.513 ± 0.142</td>
+<td>0.561 ± 0.104</td>
+<td>0.090 ± 0.262</td>
+</tr>
+<tr>
+<td>Cost Overrun Flag</td>
+<td>KNN</td>
+<td>0.513 ± 0.100</td>
+<td>0.512 ± 0.093</td>
+<td>0.552 ± 0.117</td>
+<td>0.526 ± 0.091</td>
+<td>0.506 ± 0.113</td>
+<td>0.024 ± 0.198</td>
+</tr>
+<tr>
+<td>Cost Overrun Flag</td>
+<td>Logistic Regression</td>
+<td>0.567 ± 0.114</td>
+<td>0.574 ± 0.176</td>
+<td>0.523 ± 0.194</td>
+<td>0.532 ± 0.157</td>
+<td>0.593 ± 0.145</td>
+<td>0.139 ± 0.242</td>
+</tr>
+<tr>
+<td>Cost Overrun Flag</td>
+<td>SVM</td>
+<td>0.493 ± 0.126</td>
+<td>0.517 ± 0.220</td>
+<td>0.418 ± 0.149</td>
+<td>0.445 ± 0.137</td>
+<td>0.426 ± 0.103</td>
+<td>-0.007 ± 0.273</td>
+</tr>
+<tr>
+<td>Cost Overrun Flag</td>
+<td>XGBoost</td>
+<td>0.500 ± 0.110</td>
+<td>0.501 ± 0.158</td>
+<td>0.484 ± 0.148</td>
+<td>0.483 ± 0.131</td>
+<td>0.480 ± 0.133</td>
+<td>-0.003 ± 0.230</td>
+</tr>
+<tr>
+<td>Delay Flag</td>
+<td>CatBoost</td>
+<td>0.520 ± 0.121</td>
+<td>0.618 ± 0.085</td>
+<td>0.639 ± 0.191</td>
+<td>0.623 ± 0.136</td>
+<td>0.500 ± 0.195</td>
+<td>-0.074 ± 0.214</td>
+</tr>
+<tr>
+<td>Delay Flag</td>
+<td>KNN</td>
+<td>0.640 ± 0.114</td>
+<td>0.703 ± 0.085</td>
+<td>0.773 ± 0.119</td>
+<td>0.734 ± 0.093</td>
+<td>0.602 ± 0.135</td>
+<td>0.174 ± 0.263</td>
+</tr>
+<tr>
+<td>Delay Flag</td>
+<td>Logistic Regression</td>
+<td>0.527 ± 0.106</td>
+<td>0.662 ± 0.110</td>
+<td>0.527 ± 0.198</td>
+<td>0.573 ± 0.161</td>
+<td>0.525 ± 0.159</td>
+<td>0.035 ± 0.189</td>
+</tr>
+<tr>
+<td>Delay Flag</td>
+<td>SVM</td>
+<td>0.560 ± 0.138</td>
+<td>0.679 ± 0.143</td>
+<td>0.610 ± 0.165</td>
+<td>0.636 ± 0.145</td>
+<td>0.572 ± 0.163</td>
+<td>0.064 ± 0.285</td>
+</tr>
+<tr>
+<td>Delay Flag</td>
+<td>XGBoost</td>
+<td>0.540 ± 0.149</td>
+<td>0.610 ± 0.106</td>
+<td>0.739 ± 0.227</td>
+<td>0.663 ± 0.153</td>
+<td>0.449 ± 0.203</td>
+<td>-0.130 ± 0.246</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><img alt="" src="images/baseline_comparision.png" /></p>
+<hr />
+<h4 id="key-observations-cost-overrun">Key Observations – Cost Overrun<a class="headerlink" href="#key-observations-cost-overrun" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Overall performance across all models is close to random, with ROC-AUC values ranging from approximately <strong>0.43 to 0.59</strong>, indicating a weak predictive signal in the raw feature set for cost-related outcomes.</p>
+</li>
+<li>
+<p>Logistic Regression demonstrates the strongest baseline performance for cost prediction (<strong>ROC-AUC = 0.593</strong>, <strong>MCC = 0.139</strong>), suggesting that the limited predictive information present in the dataset is primarily captured through linear relationships.</p>
+</li>
+<li>
+<p>SVM and XGBoost exhibit poor discrimination ability (<strong>ROC-AUC &lt; 0.50</strong>) and near-zero or negative MCC values, indicating difficulty in identifying meaningful patterns from the raw feature space.</p>
+</li>
+<li>
+<p>Relatively high standard deviations across cross-validation folds (<strong>Accuracy_std ≈ 0.10–0.13</strong>, <strong>ROC-AUC_std ≈ 0.10–0.15</strong>) indicate instability and sensitivity to train-test splits, further supporting the conclusion that cost overrun prediction is challenging using only the original features.</p>
+</li>
+</ul>
+<h4 id="key-observations-delay">Key Observations – Delay<a class="headerlink" href="#key-observations-delay" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Delay prediction is comparatively more successful than cost overrun prediction, with F1 scores ranging from approximately <strong>0.57 to 0.73</strong>, indicating a stronger predictive signal within the raw features.</p>
+</li>
+<li>
+<p>KNN achieves the best baseline delay performance (<strong>F1 = 0.734</strong>, <strong>ROC-AUC = 0.602</strong>, <strong>MCC = 0.174</strong>), suggesting the presence of localized neighborhood structures in the feature space that contribute to delay prediction.</p>
+</li>
+<li>
+<p>CatBoost performs relatively poorly in the baseline setting (<strong>ROC-AUC = 0.500</strong>, <strong>negative MCC</strong>), indicating that its full potential may require feature engineering and hyperparameter optimization.</p>
+</li>
+<li>
+<p>A noticeable discrepancy exists between F1 Score and ROC-AUC for certain models. For example, XGBoost achieves a relatively high <strong>F1 Score of 0.663</strong> while producing a <strong>ROC-AUC of only 0.449</strong>, suggesting threshold-dependent performance and poor probability calibration.</p>
+</li>
+<li>
+<p>The baseline results establish three important findings:</p>
+</li>
+<li>Cost Overrun is difficult to predict using the original project features.</li>
+<li>Delay exhibits moderate predictability from the raw feature set.</li>
+<li>Model selection alone is insufficient to achieve substantial performance improvements, motivating the need for feature engineering and model refinement.</li>
+</ul>
+<hr />
+<h3 id="feature-selection">Feature Selection<a class="headerlink" href="#feature-selection" title="Permanent link">&para;</a></h3>
+<p>Feature selection was performed to identify the most informative subset of features for each target variable and to remove features that contribute negatively or marginally to model performance. This step is treated as a supporting stage rather than the core of the analysis. </p>
+<h4 id="method-employed">Method Employed<a class="headerlink" href="#method-employed" title="Permanent link">&para;</a></h4>
+<p>Feature importance was computed using <strong>CatBoost with the LossFunctionChange metric.</strong> 
+Unlike permutation-based or split-count importance methods, LossFunctionChange evaluates 
+the contribution of each feature to the model's loss function. Features that, when removed, lead 
+to an increase in loss (positive importance) are retained, while features that degrade or 
+negligibly affect the objective function (negative or near-zero importance) are considered 
+candidates for removal. </p>
+<p>CatBoost was selected for this role because of its robust handling of heterogeneous tabular 
+data, native support for categorical features without preprocessing, and use of ordered boosting 
+that reduces overfitting and provides more reliable importance estimates.</p>
+<h4 id="selection-criteria">Selection criteria<a class="headerlink" href="#selection-criteria" title="Permanent link">&para;</a></h4>
+<p>Feature importance was computed independently for the Cost Overrun Flag and Delay Flag 
+targets, reflecting the hypothesis that the two outcomes are driven by different feature subsets. </p>
+<p><img alt="" src="images/cb_feature_imp_cost.png" /></p>
+<p><img alt="" src="images/cb_feature_imp_delay.png" /></p>
+<hr />
+<h4 id="validation-of-feature-selection">Validation of Feature Selection<a class="headerlink" href="#validation-of-feature-selection" title="Permanent link">&para;</a></h4>
+<p>To empirically evaluate the impact of feature selection before finalizing the feature set, two validation experiments were conducted using CatBoost and Stratified 10-Fold Cross-Validation.</p>
+<h5 id="validation-1-positive-importance-features-only">Validation 1 – Positive Importance Features Only<a class="headerlink" href="#validation-1-positive-importance-features-only" title="Permanent link">&para;</a></h5>
+<p>For both target variables, only features with strictly positive <strong>LossFunctionChange</strong> importance scores were retained. CatBoost was subsequently re-trained and evaluated using the reduced feature set, and performance was compared against the full enriched feature set.</p>
+<p><strong>Observation</strong></p>
+<ul>
+<li>For <strong>Delay Prediction</strong>, restricting the model to positive-importance features resulted in improved performance relative to the full feature set.</li>
+<li>For <strong>Cost Overrun Prediction</strong>, performance deteriorated when only positive-importance features were retained.</li>
+<li>This suggests that cost overrun prediction relies on a more diffuse and multifactor signal, where features with individually negative importance may still contribute to overall model effectiveness through interactions and collective structure.</li>
+</ul>
+<hr />
+<h5 id="validation-2-mixed-feature-set-for-cost-overrun">Validation 2 – Mixed Feature Set for Cost Overrun<a class="headerlink" href="#validation-2-mixed-feature-set-for-cost-overrun" title="Permanent link">&para;</a></h5>
+<p>To further investigate the cost prediction problem, a second experiment was conducted in which all positive importance features and a subset of the least-negative importance features were retained.</p>
+<p><strong>Observation</strong></p>
+<ul>
+<li>Model performance remained lower than that achieved using the complete enriched feature set.</li>
+<li>The results indicate that removing negatively ranked features reduces predictive capability, even when the least-negative features are preserved.</li>
+<li>This confirms that the full enriched feature set provides the strongest representation of the available cost overrun signal.</li>
+</ul>
+<hr />
+<table>
+<thead>
+<tr>
+<th>Target</th>
+<th>Feature Set</th>
+<th>Accuracy Mean</th>
+<th>F1 Mean</th>
+<th>ROC-AUC Mean</th>
+<th>MCC Mean</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cost Overrun</td>
+<td>Before FS (All Features)</td>
+<td>0.520</td>
+<td>0.473</td>
+<td>0.505</td>
+<td>0.042</td>
+</tr>
+<tr>
+<td>Cost Overrun</td>
+<td>After FS (Positive Only)</td>
+<td>0.433</td>
+<td>0.398</td>
+<td>0.375</td>
+<td>-0.141</td>
+</tr>
+<tr>
+<td>Cost Overrun</td>
+<td>After FS (Positive + Some Negative)</td>
+<td>0.433</td>
+<td>0.398</td>
+<td>0.375</td>
+<td>-0.141</td>
+</tr>
+<tr>
+<td>Delay</td>
+<td>Before FS (All Features)</td>
+<td>0.547</td>
+<td>0.649</td>
+<td>0.534</td>
+<td>-0.032</td>
+</tr>
+<tr>
+<td>Delay</td>
+<td>After FS (Positive Only)</td>
+<td>0.593</td>
+<td>0.693</td>
+<td>0.590</td>
+<td>0.084</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><img alt="" src="images/before_after_feature_selection_cost.png" /></p>
+<hr />
+<p><strong>Final Decision</strong></p>
+<p>Based on the validation results, the final input feature sets were defined as: </p>
+<ul>
+<li>For Cost Overrun – all 19 features (13 original + 6 engineered); </li>
+<li>For Delay Flag – only features with positive LossFunctionChange importance (11 features).</li>
+</ul>
+<p><img alt="" src="images/before_after_feature_selection_cost.png" /></p>
+<hr />
+<h3 id="final-modelling">Final Modelling<a class="headerlink" href="#final-modelling" title="Permanent link">&para;</a></h3>
+<p>Based on the baseline evaluation, Logistic Regression and CatBoost were selected for further optimization and detailed analysis.</p>
+<h4 id="models-used_1">Models used<a class="headerlink" href="#models-used_1" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Logistic Regression</li>
+</ol>
+<p>Logistic Regression achieved the strongest overall performance for cost overrun prediction, recording the highest F1-score (0.532), ROC-AUC (0.593), and MCC (0.139) among all baseline models. Its consistent performance across multiple evaluation metrics indicated that the relationship between the available project features and cost overrun outcomes could be effectively captured using a linear model.</p>
+<ol>
+<li>CatBoost</li>
+</ol>
+<p>Although KNN achieved the highest F1score for delay prediction (0.734), CatBoost was selected as the representative nonlinear model due to its competitive performance, ability to capture complex feature interactions, robustness on tabular datasets, and compatibility with explainability techniques such as SHAP and Partial Dependence Plots. </p>
+<p>CatBoost also provided a strong contrast to Logistic Regression, enabling comparison between linear and ensemble-based learning approaches.</p>
+<p>By selecting Logistic Regression and CatBoost, the study retained two fundamentally different modeling paradigms while focusing subsequent analysis on models that demonstrated strong predictive capability and practical interpretability.</p>
+<ol>
+<li>Small Custom Neural Network</li>
+</ol>
+<p>A two-hidden-layer Multilayer Perceptron [Input → 64 (ReLU) → Dropout(0.3) → 32 (ReLU) → Dropout(0.3) → 1 (Sigmoid)]. Intentionally shallow to prevent overfitting on the limited dataset. Binary Cross-Entropy loss with Adam optimizer. </p>
+<p><img alt="" src="images/nn.png" /></p>
+<ol>
+<li>TabNet</li>
+</ol>
+<p>An attention-based sequential architecture designed for tabular data. Uses sparse 
+feature selection at each decision step via learned attention masks. Evaluated to test whether 
+attention-based feature selection benefits this dataset. </p>
+<p><img alt="" src="images/tabnet.png" /></p>
+<ol>
+<li>TabPFN</li>
+</ol>
+<p>A pretrained transformer-based model that performs in context learning on small 
+tabular datasets. Leverages prior knowledge distilled from synthetic datasets to generalize 
+without dataset-specific training. Particularly well-suited for n &lt; 1000 settings. </p>
+<p><img alt="" src="images/tabpfn.png" /></p>
+<h4 id="hyperparameter-tuning_1">Hyperparameter Tuning<a class="headerlink" href="#hyperparameter-tuning_1" title="Permanent link">&para;</a></h4>
+<p>Following baseline evaluation, CatBoost and Logistic Regression were selected for detailed analysis. Hyperparameter optimization was performed only for CatBoost because its performance is highly dependent on parameters such as tree depth, learning rate, number of iterations, and regularization strength. Optimizing these parameters can significantly influence model behavior and predictive capability.</p>
+<p>In contrast, Logistic Regression has a relatively small and well-understood hyperparameter space, and it already demonstrated strong baseline performance. Therefore, additional optimization was considered unlikely to yield substantial improvements. As a result, tuning efforts were focused on CatBoost, where the potential performance gains were expected to be more meaningful.</p>
+<h4 id="final-modelling-results">Final Modelling Results<a class="headerlink" href="#final-modelling-results" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>For <strong>Cost Overrun Prediction</strong>, Logistic Regression marginally outperforms CatBoost across all evaluation metrics (<strong>F1: 0.55 vs. 0.51</strong>, <strong>ROC-AUC: 0.57 vs. 0.56</strong>, <strong>MCC: 0.11 vs. 0.10</strong>).</p>
+</li>
+<li>
+<p>The superior performance of Logistic Regression suggests that the predictive signal for cost overrun is predominantly linear, aligning with the EDA findings of weak but largely linear relationships between the features and the target variable.</p>
+</li>
+<li>
+<p>CatBoost does not provide a meaningful advantage for cost prediction despite its ability to model complex non-linear interactions, indicating that additional model complexity alone is insufficient to improve performance.</p>
+</li>
+<li>
+<p><strong>TabPFN achieves the best overall performance for Cost Overrun Prediction</strong>, substantially outperforming both Logistic Regression and CatBoost (<strong>F1 ≈ 0.62</strong>, <strong>ROC-AUC ≈ 0.69</strong>, <strong>MCC ≈ 0.31</strong>).</p>
+</li>
+<li>
+<p>The strong performance of TabPFN demonstrates the potential of pretrained in-context learning models to extract useful predictive patterns from small, weak-signal tabular datasets where traditional machine learning methods struggle.</p>
+</li>
+<li>
+<p>For <strong>Delay Prediction</strong>, CatBoost significantly outperforms Logistic Regression (<strong>F1: 0.74 vs. 0.61</strong>, <strong>ROC-AUC: 0.58 vs. 0.46</strong>, <strong>MCC: 0.13 vs. ≈ 0.00</strong>).</p>
+</li>
+<li>
+<p>The ROC-AUC score of Logistic Regression falls below the random-classifier threshold, indicating that the relationships governing project delay are inherently non-linear and are not adequately captured by a linear decision boundary.</p>
+</li>
+<li>
+<p><strong>CatBoost emerges as the best-performing model for Delay Prediction</strong>, achieving the highest F1 Score (<strong>≈ 0.74</strong>) among all evaluated models.</p>
+</li>
+<li>
+<p>Although TabPFN demonstrates strong performance for cost prediction, it underperforms CatBoost for delay prediction (<strong>F1 ≈ 0.60 vs. 0.74</strong>), suggesting that specialized tree-based ensemble methods remain highly effective when clear structured patterns exist in the data.</p>
+</li>
+<li>
+<p>MLP achieves moderate performance for delay prediction (<strong>F1 ≈ 0.65</strong>) but does not surpass CatBoost.</p>
+</li>
+<li>
+<p><strong>TabNet consistently exhibits the weakest performance across both prediction tasks</strong>, with particularly low recall values for Cost Overrun (<strong>0.10</strong>) and Delay (<strong>0.37</strong>).</p>
+</li>
+<li>
+<p>The poor performance of TabNet is likely attributable to the limited dataset size, which restricts its attention-based feature selection mechanism from learning robust and discriminative representations.</p>
+</li>
+<li>
+<p>The results indicate that TabNet's sequential attention architecture may require substantially larger datasets before its theoretical advantages can be effectively realized.</p>
+</li>
+</ul>
+<p><img alt="" src="images/final_comparision.png" /></p>
+<hr />
+<h4 id="model-ranking-and-stability">Model Ranking and Stability<a class="headerlink" href="#model-ranking-and-stability" title="Permanent link">&para;</a></h4>
+<p>Multiple evaluation metrics, including Accuracy, Precision, Recall, F1-score, ROC-AUC, and MCC, were used to assess model performance. However, F1-score was selected as the primary metric for model comparison and ranking.</p>
+<p>F1-score represents the harmonic mean of Precision and Recall, providing a balanced measure of a model's ability to correctly identify positive cases while minimizing both false positives and false negatives. Since the objective of this study was to identify projects at risk of cost overruns or schedule delays, both types of classification errors were considered important.</p>
+<p>Accuracy alone can be misleading because it does not distinguish between different types of errors. Precision focuses only on the correctness of positive predictions, while Recall focuses only on the ability to detect positive cases. F1-score combines both aspects into a single metric, making it more suitable for evaluating the practical effectiveness of the models.</p>
+<p><img alt="" src="images/model_ranking_cost.png" /></p>
+<hr />
+<p><img alt="" src="images/model_ranking_delay.png" /></p>
+<hr />
+<p>The model stability plot compares predictive performance (mean F1score) against variability across cross-validation folds (F1 std dev). Models located in the lower right region demonstrate the most desirable balance of high performance and low variance. </p>
+<p>The results show that TabPFN achieved the strongest performance for cost prediction, while CatBoost provided the best balance between performance and stability for delay prediction. In contrast, TabNet exhibited both lower performance and higher variability across folds.</p>
+<p><img alt="" src="images/model_stability.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.expand", "navigation.tabs", "navigation.instant", "toc.follow", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
